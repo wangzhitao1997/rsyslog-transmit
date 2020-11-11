@@ -1,0 +1,30 @@
+功能：
+1.客户端每1秒将对应目录下的json日志转发给服务端，转发成功后会清空日志;
+2.服务端会将日志保存在对应的目录下;
+
+对应文件：
+transmit-client.py     客户端
+transmit-server.py     服务器端
+loginotify.py          监控日志清理日志，记录登录以及服务重启日志
+
+相关模块：
+logclean.py            清空日志
+diskwalk.py  	       遍历目录
+setting.py             解析配置文件
+jsonlogger.py          记录json格式的登录以及服务重启日志
+rsyslog-transmit.conf  相关配置文件
+
+安装：
+1.服务器端安装rsyslog-transmit-server、rsyslog-transmit-modules
+2.客户端安装rsyslog-transmit-client、rsyslog-transmit-modules
+3.客户端修改/opt/RsyslogTransmit-client/rsyslog-transmit.conf/client-setting.d/default-client.conf，修改服务器的地址和通信端口
+4.服务器修改/opt/RsyslogTransmit-server/rsyslog-transmit.conf/server-setting.d/default-server.conf，修改服务器的地址和通信端口
+5.重启系统
+
+
+注：
+1.目前客户端读取的json文件目前只能保存一条，多条json文件会报错，待修改
+2.需要将通信端口放行或关闭防火墙
+
+
+

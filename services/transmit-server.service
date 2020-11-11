@@ -1,0 +1,11 @@
+[Unit]
+Description=rsyslog transmit server
+After=network.target
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/nohup /usr/bin/python /opt/RsyslogTransmit-server/transmit-server.py >/dev/null 2>&1 &
+
+[Install]
+WantedBy=multi-user.target

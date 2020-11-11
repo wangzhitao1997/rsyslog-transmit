@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=loginotify
+Type=Application
+Exec=/opt/rsyslog-transmit-client/loginotify.py
+X-MATE-Autostart-Phase=Application
+Terminal=false
+X-MATE-Autostart-Notify=true

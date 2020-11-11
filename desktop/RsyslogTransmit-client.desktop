@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=RsyslogTransmit-client
+Type=Application
+Exec=/opt/RsyslogTransmit-client/transmit-client.py
+X-MATE-Autostart-Phase=Application
+Terminal=false
+X-MATE-Autostart-Notify=true
